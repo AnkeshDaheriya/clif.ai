@@ -1,6 +1,24 @@
 /*-------------------------
    Header Styles
 -------------------------*/
+.banner.banner-style-5 .banner-content .title {
+    color: var(--color-ship-gray);
+    margin-bottom: 50px;
+}
+.axil-btn.btn-fill-white {
+    background-color: var(--color-white);
+    box-shadow: 1px 48px 48px 0px rgba(0, 0, 0, 0.15);
+    &:hover {
+                background-color: #6600CC!important;
+            }
+}
+.banner.banner-style-5 .banner-content .axil-btn {
+    color: var(--color-text-dark);
+    box-shadow: 1px 48px 48px 0px rgba(0, 0, 0, 0.15);
+    &:hover {
+             color: var(--color-white)!important;
+            }
+}
 a{
     color:#6600CC;
 }
@@ -23,17 +41,41 @@ a{
      color:#6600CC;
 }
 .my_switcher button span {
-    // padding: 0;
-    // text-align: center;
-    // // color: var(--color-white);
-    // background-color: transparent;
-    // font-size: 18px;
-    // height: 40px;
-    // width: 40px;
-    // line-height: 36px;
-    // border: 1px solid transparent;
-    // border-radius: 50%;
+   
     display: none;
+}
+.axil-header.header-style-4 .axil-mainmenu.axil-sticky {
+    background-color: #FFFFFF!important;
+}
+.axil-header.header-style-4 .mainmenu li a {
+    color: var(--color-body)!important;
+    &.haver{
+        color: var(--color-body)!important;
+    }
+}
+.banner.banner-style-5::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(41, 41, 48, 0.0) !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.axil-btn {
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    padding: 15px 20px;
+    height: auto;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
 }
  
 .axil-header {
@@ -212,9 +254,9 @@ a{
                     border-color: var(--color-gray-4);  
                 }
                 a {
-                    color: var(--color-light);
+                    color: var(--color-primary);
                     &::before {
-                        background-color: var(--color-white);
+                        background-color: var(--color-primary);
                     }
                     &::after {
                         color: var(--color-gray-4);
@@ -535,8 +577,10 @@ a{
             }
         }
     }
+    
     .header-btn {
         margin-right: 0;
+       
         @media only screen and (max-width: 1399px) {
             .axil-btn {
                 padding: 15px 40px;

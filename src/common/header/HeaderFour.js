@@ -37,9 +37,9 @@ const HeaderFour = () => {
             <div className="header-navbar">
               <div className="header-logo">
                 <Logo
-                  limage="/images/logo-white.png"
-                  dimage="/images/logo-white.png"
-                  simage="/images/logo-white.png"
+                  limage="/images/logo.png"
+                  dimage="/images/logo.png"
+                  simage="/images/logo.png"
                 />
               </div>
               <div className="header-main-nav">
