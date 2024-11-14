@@ -4,11 +4,13 @@ import HeaderOne from "../common/header/HeaderOne";
 import SEO from "../common/SEO";
 import BcrumbBannerOne from "../elements/breadcrumb/BcrumbBannerOne";
 import CtaLayoutOne from "../component/cta/CtaLayoutOne";
+import AboutProp from "../component/casestudy/AboutProp";
 import ColorSwitcher from "../elements/switcher/ColorSwitcher";
 // import ProcessOne from '../component/process/ProcessOne';
-import AboutThree from "../component/about/AboutThree";
+import BrandOne from "../component/brand/BrandOne";
 import AboutFour from "../component/about/AboutFour";
 import AboutFive from "../component/about/AboutFive";
+import Tilty from "react-tilty";
 
 const AboutUs = () => {
   return (
@@ -33,8 +35,13 @@ const AboutUs = () => {
         />
 
         <AboutFour />
-        <AboutThree />
-        <AboutFive />
+        <BrandOne />
+        {/* <AboutFive /> */}
+        <div className="pt--250 pt_lg--200 pt_md--100 pt_sm--80 case-study-page-area">
+          <div className="container">
+            <AboutProp />
+          </div>
+        </div>
         {/* <ProcessOne /> */}
         <CtaLayoutOne />
         <FooterOne parentClass="" />

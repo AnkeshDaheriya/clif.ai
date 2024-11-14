@@ -16,13 +16,13 @@ const BannerFive = () => {
           <div className="col-lg-6 col-xl-7">
             <div className="banner-content">
               <h1 className="title">
-                Elevate Your Career &amp; Foster Connections
+                Unleash Your Career With CLIF AI’s Guided Learning & Mentorship
               </h1>
               <div>
                 <Link
                   to={process.env.PUBLIC_URL + "/project-grid-one"}
                   className="axil-btn btn-fill-white btn-large">
-                  View Showcase
+                  Explore CLIF AI
                 </Link>
               </div>
             </div>
@@ -30,7 +30,11 @@ const BannerFive = () => {
           <div className="col-lg-6 col-xl-5">
             <div className="banner-form">
               <div className="contact-form-box shadow-box">
-                <h3 className="title">Get a free Keystroke quote now</h3>
+                <h5 className="title">
+                  Transform Your Career Now <br />
+                  Need Something Quick?
+                </h5>
+
                 <FormOne />
               </div>
             </div>

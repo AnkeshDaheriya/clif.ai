@@ -5,13 +5,13 @@ import {
   FaPinterestP,
   FaLinkedin,
   FaInstagram,
-  FaVimeoV,
-  FaDribbble,
-  FaBehance,
+  FaTwitter,
+  FaYoutube,
+  FaWikipediaW,
   FaEnvelopeOpen,
-  FaTiktok,
+  // FaTiktok,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+// import { FaTwitter } from "react-icons/fa6";
 import ServiceData from "../../data/service/ServiceMain.json";
 import { slugify } from "../../utils";
 
@@ -31,7 +31,7 @@ const FooterOne = ({ parentClass }) => {
               </li>
               <li>
                 <Link to="https://twitter.com/">
-                  <FaXTwitter />
+                  <FaTwitter />
                 </Link>
               </li>
               <li>
@@ -50,23 +50,13 @@ const FooterOne = ({ parentClass }) => {
                 </Link>
               </li>
               <li>
-                <Link to="https://vimeo.com/">
-                  <FaVimeoV />
+                <Link to="https://www.youtube.com/">
+                  <FaYoutube />
                 </Link>
               </li>
               <li>
-                <Link to="https://dribbble.com/">
-                  <FaDribbble />
-                </Link>
-              </li>
-              <li>
-                <Link to="https://www.behance.net/">
-                  <FaBehance />
-                </Link>
-              </li>
-              <li>
-                <Link to="https://www.tiktok.com/en/">
-                  <FaTiktok />
+                <Link to="https://www.wikipedia.org/">
+                  <FaWikipediaW />
                 </Link>
               </li>
             </ul>
@@ -77,15 +67,16 @@ const FooterOne = ({ parentClass }) => {
             <div className="col-xl-6 col-lg-5">
               <div className="footer-widget border-end">
                 <div className="footer-newsletter">
-                  <h2 className="title">Get in touch!</h2>
+                  <h2 className="title">Subscribe for Exclusive Updates!</h2>
                   <p>
-                    Fusce varius, dolor tempor interdum tristique, dui urna bib
-                    endum magna, ut ullamcorper purus
+                    Be the first to know about new opportunities, career advice,
+                    and much more, by signing up for our newsletter! 21) Under
+                    Services add the following link
                   </p>
                   <form>
                     <div className="input-group">
                       <span className="mail-icon">
-                        <FaEnvelopeOpen />{" "}
+                        <FaEnvelopeOpen />
                       </span>
                       <input
                         type="email"
@@ -135,13 +126,7 @@ const FooterOne = ({ parentClass }) => {
                         <li>
                           {" "}
                           <Link to={process.env.PUBLIC_URL + "/case-study"}>
-                            Case Studies
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            to={process.env.PUBLIC_URL + "/project-grid-one"}>
-                            Portfolio
+                            Mentors Pool
                           </Link>
                         </li>
                       </ul>
@@ -183,7 +168,7 @@ const FooterOne = ({ parentClass }) => {
               <div className="footer-copyright">
                 <span className="copyright-text">
                   © {new Date().getFullYear()}. All rights reserved by{" "}
-                  <a href="#"> CLIF.AI </a>.
+                  <Link to={process.env.PUBLIC_URL + "/"}> CLIF.AI </Link>.
                 </span>
               </div>
             </div>

@@ -1,8 +1,8 @@
 [
     {
         "image": "/images/icon/icon-1.png",
-        "title": "Design",
-        "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
+        "title": "Dream Career",
+        "description": "Gain personalized, one-on-one guidance from top mentors worldwide to unlock your full potential.",
         "process": {
             "sectionSub": "Process",
             "sectionTitle": "Our logo design process",
@@ -38,8 +38,8 @@
     },
     {
         "image": "/images/icon/icon-2.png",
-        "title": "Development",
-        "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
+        "title": "For Recruiters",
+        "description": "Discover exciting job openings and career opportunities tailored to your skills and aspirations.",
         "process": {
             "sectionSub": "Process",
             "sectionTitle": "Our logo design process",
@@ -75,8 +75,8 @@
     },
     {
         "image": "/images/icon/icon-3.png",
-        "title": "Online marketing",
-        "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
+        "title": "Track Your Progress ",
+        "description": "Access tailored courses through structured, expertly guided videos designed to elevate your expertise",
         "process": {
             "sectionSub": "Process",
             "sectionTitle": "Our logo design process",
@@ -112,7 +112,7 @@
     },
     {
         "image": "/images/icon/icon-4.png",
-        "title": "Business",
+        "title": "Modern Day Upskilling ",
         "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
         "process": {
             "sectionSub": "Process",
@@ -149,7 +149,7 @@
     },
     {
         "image": "/images/icon/icon-5.png",
-        "title": "Technology",
+        "title": "Career Opportunities ",
         "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
         "process": {
             "sectionSub": "Process",
@@ -186,7 +186,7 @@
     },
     {
         "image": "/images/icon/icon-6.png",
-        "title": "Content strategy",
+        "title": "Personalized Mentorship ",
         "description": "Simply drag and drop photos and videos into your workspace to automatically add them to your Collab Cloud library.",
         "process": {
             "sectionSub": "Process",
