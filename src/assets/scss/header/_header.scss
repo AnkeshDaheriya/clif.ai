@@ -1,6 +1,17 @@
 /*-------------------------
    Header Styles
 -------------------------*/
+.text-red{
+    color: crimson;
+}
+.form-check .form-check-input {
+    float: none;
+    margin-left: -1.5em;
+    padding: 7px 7px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
 .banner.banner-style-5 .banner-content .title {
     color: var(--color-ship-gray);
     margin-bottom: 50px;
