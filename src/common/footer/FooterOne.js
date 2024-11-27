@@ -122,7 +122,6 @@ const FooterOne = ({ parentClass }) => {
                           </Link>
                         </li>
                         <li>
-                          {" "}
                           <Link to={process.env.PUBLIC_URL + "/case-study"}>
                             Mentors Pool
                           </Link>
@@ -154,6 +153,22 @@ const FooterOne = ({ parentClass }) => {
                         </li>
                       </ul>
                     </div>
+                  </div>
+                </div>
+                <div className="d-flex justify-content-end">
+                  <div className="botum">
+                    <Link
+                      to={process.env.PUBLIC_URL + "/project-grid-one"}
+                      className="axil-btn btn-fill-white ">
+                      <i class="fa fa-android"></i> Get our android app
+                    </Link>
+                  </div>
+                  <div className="botum">
+                    <Link
+                      to={process.env.PUBLIC_URL + "/project-grid-one"}
+                      className="axil-btn btn-fill-white ">
+                      <i class="fa fa-apple"></i> Get our ios app
+                    </Link>
                   </div>
                 </div>
               </div>

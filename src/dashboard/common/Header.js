@@ -26,13 +26,7 @@ function Header() {
         </div>
       </div>
       {/* Preloader */}
-      <div className="preloader">
-        <img
-          src="./assets/images/logos/favicon.png"
-          alt="loader"
-          className="lds-ripple img-fluid"
-        />
-      </div>
+
       <div id="main-wrapper">
         {/* Sidebar Start */}
         <aside className="left-sidebar with-vertical">
@@ -40,6 +34,7 @@ function Header() {
             {/* ---------------------------------- */}
             {/* Start Vertical Layout Sidebar */}
             {/* ---------------------------------- */}
+
             <div className="brand-logo d-flex align-items-center justify-content-between">
               <Link to="./main/index.html" className="text-nowrap logo-img">
                 <img

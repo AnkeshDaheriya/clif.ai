@@ -4,10 +4,6 @@ import Footer from "../common/Footer";
 // import ApexCharts from "apexcharts";
 
 function Dashboard() {
-  // if (document.querySelector("#chart")) {
-  //   var chart = new ApexCharts(document.querySelector("#chart"), options);
-  //   chart.render();
-  // }
   document.addEventListener("DOMContentLoaded", () => {
     const circles = document.querySelectorAll(".circle");
 
@@ -172,6 +168,7 @@ function Dashboard() {
                   <div className="row align-items-center">
                     <div className="">
                       <div id="chart" className="mx-n6" />
+                      <div id="chart"></div>
                     </div>
                   </div>
                 </div>

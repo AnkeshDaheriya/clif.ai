@@ -8,7 +8,7 @@ import DigitalAgency from "./pages/DigitalAgency";
 import CreativeAgency from "./pages/CreativeAgency";
 import PersonalPortfolio from "./pages/PersonalPortfolio";
 import HomeStartup from "./pages/HomeStartup";
-import CorporateAgency from "./pages/CorporateAgency";
+// import CorporateAgency from "./pages/CorporateAgency";
 
 // Blog Import
 import BlogGridView from "./pages/BlogGrid";
@@ -30,7 +30,7 @@ import ProjectGridFour from "./pages/ProjectGridFour";
 import ProjectDetails from "./pages/ProjectDetails";
 
 // Pages
-import Splash from "./pages/Splash";
+// import Splash from "./pages/Splash";
 import AboutUs from "./pages/AboutUs";
 import OurOffice from "./pages/OurOffice";
 import OurClients from "./pages/OurClients";
@@ -58,10 +58,7 @@ const App = () => {
       <ScrollToTop>
         <Routes>
           {/* <Route path={process.env.PUBLIC_URL + "/"} element={<Splash />}/> */}
-          <Route
-            path={process.env.PUBLIC_URL + "/"}
-            element={<CorporateAgency />}
-          />
+          <Route path={process.env.PUBLIC_URL + "/"} element={<Dashboard />} />
 
           <Route
             path={process.env.PUBLIC_URL + "/digital-agency"}
