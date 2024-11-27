@@ -1,8 +1,6 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap); /*!
- * Tabler Icons 1.112.0 by tabler - https://tabler.io
- * License - https://github.com/tabler/tabler-icons/blob/master/LICENSE
- */
+@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap);
+
 @font-face {
   font-family: tabler-icons;
   font-style: normal;
@@ -15,6 +13,118 @@
     url(../fonts/tabler-icons/fonts/tabler-icons.ttf) format("truetype"),
     url(../fonts/tabler-icons/fonts/tabler-icons.svg#tabler-icons) format("svg");
 }
+.fill-height {
+  height: -webkit-fill-available !important;
+}
+.test .row > [class*=col] {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 16px;
+    /* margin-bottom: -1px; */
+}
+
+
+.progress-bar {
+  /* margin-top: 30px !important; */
+  gap: 20px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: end !important;
+  overflow: hidden !important;
+  color: var(--bs-progress-bar-color);
+  text-align: end !important;
+  white-space: nowrap !important;
+  background-color: var(--bs-progress-bar-bg);
+  transition: var(--bs-progress-bar-transition);
+}
+
+
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle .inner-circle {
+  width: 60px;
+  height: 60px;
+  background: #1d1d1d;
+  border-radius: 50%;
+  z-index: 2;
+}
+.col p {
+  position: absolute;
+  bottom: -30px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Progress Ring */
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid #555; /* Default grey background */
+  box-sizing: border-box;
+}
+
+.circle {
+  position: relative;
+  width: 100px; /* Adjust size */
+  height: 100px;
+  border-radius: 50%;
+  background: #f0f0f0; /* Gray background */
+  overflow: hidden;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid transparent;
+  /* border-top-color: #0d6efd; Blue progress */
+  box-sizing: border-box;
+  transform: rotate(var(--rotation-degree, 0deg)); /* Dynamic rotation */
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+
+/* Activated State */
+.circle.active p {
+  color: #00cc66;
+}
+
+.arrow.active {
+  color: #00cc66;
+}
+
+body .bg-secondary-subtle {
+  background-color: #cfe2ff !important;
+}
+body a {
+  color: #161517 !important;
+}
+body h6 {
+  font-size: 0.875rem;
+}
+/* body .row2 {
+    margin-left: 15px;
+}
+body .test {
+    margin-right: 15px;
+} */
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: tabler-icons;
@@ -22,13 +132,36 @@
       format("svg");
   }
 }
-@media (min-width: 1200px) {
-    /* Target the body or another parent container for more specificity */
-    body .fs-3 {
-        font-size: 0.75rem !important;
-    }
+html[data-boxed-layout="boxed"] .container-fluid,
+html[data-boxed-layout="boxed"] .container-lg,
+html[data-boxed-layout="boxed"] .container-md,
+html[data-boxed-layout="boxed"] .container-sm,
+html[data-boxed-layout="boxed"] .container-xl,
+html[data-boxed-layout="boxed"] .container-xxl {
+  margin-left: auto !important;
+  margin-right: 20px !important;
 }
 
+@media (max-width: 768px) {
+  body .fs-3 {
+    font-size: calc(0.75rem + 0.6vw) !important;
+  }
+  body .fs-2 {
+    font-size: 0.75rem !important;
+  }
+}
+
+#main-wrapper {
+  min-height: fit-content !important;
+}
+@media (min-width: 1200px) {
+  body .fs-3 {
+    font-size: 0.875rem !important;
+  }
+  body .fs-2 {
+    font-size: 0.875rem !important;
+  }
+}
 .page-wrapper .body-wrapper > .container-fluid,
 .page-wrapper .body-wrapper > .container-lg,
 .page-wrapper .body-wrapper > .container-md,
@@ -14719,7 +14852,7 @@
   --bs-light-text-emphasis: #f6f9fc;
   --bs-dark-text-emphasis: #2a3547;
   --bs-primary-bg-subtle: #ecf2ff;
-  --bs-secondary-bg-subtle: #e8f7ff;
+  --bs-secondary-bg-subtle: #ecf8ff;
   --bs-success-bg-subtle: #e6fffa;
   --bs-info-bg-subtle: #ebf3fe;
   --bs-warning-bg-subtle: #fef5e5;
@@ -23898,7 +24031,7 @@ fieldset:disabled .btn {
   padding: 0.5rem !important;
 }
 .p-3 {
-  padding: 1rem !important;
+  padding: 0.875rem !important;
 }
 .p-4 {
   padding: 1.5rem !important;

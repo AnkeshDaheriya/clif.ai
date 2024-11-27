@@ -1,178 +1,177 @@
 import React from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
+// import ApexCharts from "apexcharts";
 
 function Dashboard() {
+  // if (document.querySelector("#chart")) {
+  //   var chart = new ApexCharts(document.querySelector("#chart"), options);
+  //   chart.render();
+  // }
+  document.addEventListener("DOMContentLoaded", () => {
+    const circles = document.querySelectorAll(".circle");
+
+    circles.forEach((circle, index) => {
+      // Get progress percentage from data attribute
+      const progress = parseInt(circle.getAttribute("data-progress"), 10);
+
+      // Calculate the rotation for the progress ring
+      const rotation = (progress / 100) * 360;
+
+      // Set the rotation of the progress ring
+      const progressRing = circle.querySelector("::after");
+      circle.style.setProperty("--rotation", `${rotation}deg`);
+
+      // Dynamically apply active class (simulate level progression)
+      setTimeout(() => {
+        circle.classList.add("active");
+        circle.style.setProperty("--rotation", `${rotation}deg`);
+      }, index * 1000); // Delay for animation
+
+      document.querySelectorAll(".circle").forEach((circle) => {
+        const progress = circle.getAttribute("data-progress"); // Fetch progress value
+        const blueDegree = (progress / 100) * 360; // Calculate degree for progress
+
+        // Set dynamic background using conic-gradient
+        circle.style.background = `conic-gradient(#0d6efd ${blueDegree}deg, #ddd ${blueDegree}deg)`;
+      });
+    });
+  });
   return (
     <>
       <Header />
       <div className="body-wrapper">
         <div className="container-fluid">
-          {/*  Owl carousel */}
-          <div className="owl-carousel counter-carousel owl-theme">
-            <div className="item">
-              <div className="card border-0 zoom-in bg-primary-subtle shadow-none">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img
-                      src="./assets/images/svgs/icon-user-male.svg"
-                      width={50}
-                      height={50}
-                      className="mb-3"
-                      alt="modernize-img"
-                    />
-                    <p className="fw-semibold fs-3 text-primary mb-1">
-                      Employees
-                    </p>
-                    <h5 className="fw-semibold text-primary mb-0">96</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card border-0 zoom-in bg-warning-subtle shadow-none">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img
-                      src="./assets/images/svgs/icon-briefcase.svg"
-                      width={50}
-                      height={50}
-                      className="mb-3"
-                      alt="modernize-img"
-                    />
-                    <p className="fw-semibold fs-3 text-warning mb-1">
-                      Clients
-                    </p>
-                    <h5 className="fw-semibold text-warning mb-0">3,650</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card border-0 zoom-in bg-info-subtle shadow-none">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img
-                      src="./assets/images/svgs/icon-mailbox.svg"
-                      width={50}
-                      height={50}
-                      className="mb-3"
-                      alt="modernize-img"
-                    />
-                    <p className="fw-semibold fs-3 text-info mb-1">Projects</p>
-                    <h5 className="fw-semibold text-info mb-0">356</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card border-0 zoom-in bg-danger-subtle shadow-none">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img
-                      src="./assets/images/svgs/icon-favorites.svg"
-                      width={50}
-                      height={50}
-                      className="mb-3"
-                      alt="modernize-img"
-                    />
-                    <p className="fw-semibold fs-3 text-danger mb-1">Events</p>
-                    <h5 className="fw-semibold text-danger mb-0">696</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card border-0 zoom-in bg-success-subtle shadow-none">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img
-                      src="./assets/images/svgs/icon-speech-bubble.svg"
-                      width={50}
-                      height={50}
-                      className="mb-3"
-                      alt="modernize-img"
-                    />
-                    <p className="fw-semibold fs-3 text-success mb-1">
-                      Payroll
-                    </p>
-                    <h5 className="fw-semibold text-success mb-0">$96k</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="card border-0 zoom-in bg-info-subtle shadow-none">
-                <div className="card-body">
-                  <div className="text-center">
-                    <img
-                      src="./assets/images/svgs/icon-connect.svg"
-                      width={50}
-                      height={50}
-                      className="mb-3"
-                      alt="modernize-img"
-                    />
-                    <p className="fw-semibold fs-3 text-info mb-1">Reports</p>
-                    <h5 className="fw-semibold text-info mb-0">59</h5>
+          <div className="row">
+            <div className="d-flex align-items-end">
+              <div className="card-body">
+                <div className="d-sm-flex d-block align-items-end justify-content-between ">
+                  <div className="mb-sm-0">
+                    <h4>
+                      Let's goals yor career Ankesh you will archive your career
+                      goals in [] Notes
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          {/*  Row 1 */}
+          <div className="row">
+            <div className="d-flex align-items-end">
+              <div className="card w-100">
+                <div className="card-body">
+                  <div className="d-block align-items-end mb-9">
+                    <div className="mb-sm-0">
+                      <div className="progress-container justify-content-start row">
+                        <div className="progress-bar d-flex justify-content-between align-items-center w-100">
+                          <div className="title ">
+                            <h4>Skill Goals Analysis</h4>
+                            {/* <p>
+                              You Will Archive Your Career Goals in [] Notes
+                            </p> */}
+                          </div>
+                          {[
+                            {
+                              level: "LEVEL 1",
+                              progress: 14,
+                              avg: "14%",
+                              color: "red",
+                            },
+                            {
+                              level: "LEVEL 2",
+                              progress: 28,
+                              avg: "28%",
+                              color: "orange",
+                            },
+                            {
+                              level: "LEVEL 3",
+                              progress: 42,
+                              avg: "42%",
+                              color: "yellow",
+                            },
+                            {
+                              level: "LEVEL 4",
+                              progress: 56,
+                              avg: "56%",
+                              color: "lightgreen",
+                            },
+                            {
+                              level: "LEVEL 5",
+                              progress: 70,
+                              avg: "70%",
+                              color: "green",
+                            },
+                            {
+                              level: "LEVEL 6",
+                              progress: 84,
+                              avg: "84%",
+                              color: "blue",
+                            },
+                            {
+                              level: "LEVEL 7",
+                              progress: 100,
+                              avg: "100%",
+                              color: "purple",
+                            },
+                          ].map((item, index) => (
+                            <div className="col-auto text-center" key={index}>
+                              {/* Progress Circle */}
+                              <div
+                                className="circle mx-auto"
+                                data-progress={item.progress}>
+                                <div className="progress-ring"></div>
+                                <div className="inner-circle"></div>
+                              </div>
+                              <small className={`text-${item.color} d-block`}>
+                                {item.level}
+                              </small>
+                              {/* Arrow Section */}
+                              {index < 7 && (
+                                <div
+                                  className={`arrow text-center text-${item.color}`}>
+                                  {item.avg}
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="progress-container justify-content-start row">
+                        <div className="progress-bar d-flex justify-content-between align-items-center w-100">
+                          <div className="row">
+                            <div className="d-flex align-items-baseline col ">
+                              <span className="round-8 text-bg-primary rounded-circle me-6" />
+                              <div>
+                                <h6 className=" fw-semibold mb-0">
+                                  <small>Desired Salary</small> $48,820
+                                </h6>
+                              </div>
+                            </div>
+                            <div className="d-flex align-items-baseline col ">
+                              <span className="round-8 text-bg-secondary rounded-circle me-6" />
+                              <h6 className=" fw-semibold mb-0">
+                                <small>Current Salary</small> : $26,498
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+          </div>
+
           <div className="row">
             <div className="col-lg-8 d-flex align-items-stretch">
               <div className="card w-100">
                 <div className="card-body">
-                  <div className="d-sm-flex d-block align-items-center justify-content-between mb-9">
-                    <div className="mb-3 mb-sm-0">
-                      <h5 className="card-title fw-semibold">
-                        Revenue Updates
-                      </h5>
-                      <p className="card-subtitle mb-0">Overview of Profit</p>
-                    </div>
-                    <select className="form-select w-auto">
-                      <option value={1}>March 2023</option>
-                      <option value={2}>April 2023</option>
-                      <option value={3}>May 2023</option>
-                      <option value={4}>June 2023</option>
-                    </select>
-                  </div>
+                  <div className="d-sm-flex d-block align-items-center justify-content-between mb-9"></div>
                   <div className="row align-items-center">
-                    <div className="col-md-8">
+                    <div className="">
                       <div id="chart" className="mx-n6" />
-                    </div>
-                    <div className="col-md-4">
-                      <div className="hstack mb-4 pb-1">
-                        <div className="p-8 bg-primary-subtle rounded-1 me-3 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-grid-dots text-primary fs-6" />
-                        </div>
-                        <div>
-                          <h4 className="mb-0 fs-7 fw-semibold">$63,489.50</h4>
-                          <p className="fs-3 mb-0">Total Earnings</p>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="d-flex align-items-baseline mb-4">
-                          <span className="round-8 text-bg-primary rounded-circle me-6" />
-                          <div>
-                            <p className="fs-3 mb-1">Earnings this month</p>
-                            <h6 className="fs-5 fw-semibold mb-0">$48,820</h6>
-                          </div>
-                        </div>
-                        <div className="d-flex align-items-baseline mb-4 pb-1">
-                          <span className="round-8 text-bg-secondary rounded-circle me-6" />
-                          <div>
-                            <p className="fs-3 mb-1">Expense this month</p>
-                            <h6 className="fs-5 fw-semibold mb-0">$26,498</h6>
-                          </div>
-                        </div>
-                        <div>
-                          <button className="btn btn-primary w-100">
-                            View Full Report
-                          </button>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -180,14 +179,16 @@ function Dashboard() {
             </div>
             <div className="col-lg-4 d-flex align-items-stretch flex-column">
               {/* Yearly Breakup */}
-              <div className="card w-100">
-                <div className="card-body">
+
+              {/* Monthly Earnings */}
+              <div className="card w-100 fill-height">
+                <div className="card-body ">
                   <div className="row align-items-center">
-                    <div className="col-8">
+                    <div className=" col-8">
                       <h5 className="card-title mb-9 fw-semibold">
-                        Yearly Breakup
+                        Progress to Goal
                       </h5>
-                      <h4 className="fw-semibold mb-3">$36,358</h4>
+                      <h4 className="fw-semibold mb-3">0%</h4>
                       <div className="d-flex align-items-center mb-3">
                         <span className="me-1 rounded-circle bg-success-subtle round-20 d-flex align-items-center justify-content-center">
                           <i className="ti ti-arrow-up-left text-success" />
@@ -195,52 +196,19 @@ function Dashboard() {
                         <p className="text-dark me-1 fs-3 mb-0">+9%</p>
                         <p className="fs-3 mb-0">last year</p>
                       </div>
-                      <div className="d-flex align-items-center">
-                        <div className="me-4">
-                          <span className="round-8 text-bg-primary rounded-circle me-2 d-inline-block" />
-                          <span className="fs-2">2023</span>
-                        </div>
-                        <div>
-                          <span className="round-8 bg-primary-subtle rounded-circle me-2 d-inline-block" />
-                          <span className="fs-2">2023</span>
-                        </div>
-                      </div>
                     </div>
                     <div className="col-4">
                       <div className="d-flex justify-content-center">
                         <div id="breakup" />
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              {/* Monthly Earnings */}
-              <div className="card w-100">
-                <div className="card-body">
-                  <div className="row align-items-start">
-                    <div className="col-8">
-                      <h5 className="card-title mb-9 fw-semibold">
-                        Monthly Earnings
-                      </h5>
-                      <h4 className="fw-semibold mb-3">$6,820</h4>
-                      <div className="d-flex align-items-center pb-1">
-                        <span className="me-2 rounded-circle bg-danger-subtle round-20 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-arrow-down-right text-danger" />
-                        </span>
-                        <p className="text-dark me-1 fs-3 mb-0">+9%</p>
-                        <p className="fs-3 mb-0">last year</p>
-                      </div>
-                    </div>
-                    <div className="col-4">
-                      <div className="d-flex justify-content-end">
-                        <div className="text-white text-bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-currency-dollar fs-6" />
-                        </div>
-                      </div>
+                    <div>
+                      <button className="btn btn-primary w-100">
+                        View Full Report
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div id="earning" />
               </div>
             </div>
             <div className="col-lg-4 d-flex align-items-stretch">

@@ -75,7 +75,7 @@ function Header() {
                     <span>
                       <i className="ti ti-aperture" />
                     </span>
-                    <span className="hide-menu">Modern</span>
+                    <span className="hide-menu">Profile</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
@@ -86,7 +86,7 @@ function Header() {
                     <span>
                       <i className="ti ti-shopping-cart" />
                     </span>
-                    <span className="hide-menu">eCommerce</span>
+                    <span className="hide-menu">Dashboard</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
@@ -97,7 +97,7 @@ function Header() {
                     <span>
                       <i className="ti ti-currency-dollar" />
                     </span>
-                    <span className="hide-menu">NFT</span>
+                    <span className="hide-menu">Portfolio</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
@@ -108,7 +108,7 @@ function Header() {
                     <span>
                       <i className="ti ti-cpu" />
                     </span>
-                    <span className="hide-menu">Crypto</span>
+                    <span className="hide-menu">Groups</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
@@ -119,7 +119,7 @@ function Header() {
                     <span>
                       <i className="ti ti-activity-heartbeat" />
                     </span>
-                    <span className="hide-menu">General</span>
+                    <span className="hide-menu">Companies</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
@@ -130,7 +130,7 @@ function Header() {
                     <span>
                       <i className="ti ti-playlist" />
                     </span>
-                    <span className="hide-menu">Music</span>
+                    <span className="hide-menu">Modules</span>
                   </Link>
                 </li>
                 {/* ---------------------------------- */}
@@ -144,7 +144,7 @@ function Header() {
                     <span className="d-flex">
                       <i className="ti ti-layout-grid" />
                     </span>
-                    <span className="hide-menu">Frontend page</span>
+                    <span className="hide-menu">Topics</span>
                   </Link>
                   <ul aria-expanded="false" className="collapse first-level">
                     <li className="sidebar-item">
@@ -1953,285 +1953,6 @@ function Header() {
                   </li>
                 </ul>
                 <ul className="navbar-nav quick-links d-none d-lg-flex align-items-center">
-                  {/* ------------------------------- */}
-                  {/* start apps Dropdown */}
-                  {/* ------------------------------- */}
-                  <li className="nav-item nav-icon-hover-bg rounded w-auto dropdown d-none d-lg-block mx-0">
-                    <div className="hover-dd">
-                      <Link className="nav-link" to="">
-                        Apps
-                        <span className="mt-1">
-                          <i className="ti ti-chevron-down fs-3" />
-                        </span>
-                      </Link>
-                      <div className="dropdown-menu dropdown-menu-nav dropdown-menu-animate-up py-0">
-                        <div className="row">
-                          <div className="col-8">
-                            <div className="ps-7 pt-7">
-                              <div className="border-bottom">
-                                <div className="row">
-                                  <div className="col-6">
-                                    <div className="position-relative">
-                                      <Link
-                                        to="./main/app-chat.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-chat.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Chat Application
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            New messages arrived
-                                          </span>
-                                        </div>
-                                      </Link>
-                                      <Link
-                                        to="./main/app-invoice.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-invoice.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Invoice App
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            Get latest invoice
-                                          </span>
-                                        </div>
-                                      </Link>
-                                      <Link
-                                        to="./main/app-contact2.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-mobile.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Contact Application
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            2 Unsaved Contacts
-                                          </span>
-                                        </div>
-                                      </Link>
-                                      <Link
-                                        to="./main/app-email.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-message-box.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Email App
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            Get new emails
-                                          </span>
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                  <div className="col-6">
-                                    <div className="position-relative">
-                                      <Link
-                                        to="./main/page-user-profile.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-cart.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            User Profile
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            learn more information
-                                          </span>
-                                        </div>
-                                      </Link>
-                                      <Link
-                                        to="./main/app-calendar.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-date.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Calendar App
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            Get dates
-                                          </span>
-                                        </div>
-                                      </Link>
-                                      <Link
-                                        to="./main/app-contact.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-lifebuoy.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Contact List Table
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            Add new contact
-                                          </span>
-                                        </div>
-                                      </Link>
-                                      <Link
-                                        to="./main/app-notes.html"
-                                        className="d-flex align-items-center pb-9 position-relative">
-                                        <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                          <img
-                                            src="./assets/images/svgs/icon-dd-application.svg"
-                                            alt="modernize-img"
-                                            className="img-fluid"
-                                            width={24}
-                                            height={24}
-                                          />
-                                        </div>
-                                        <div>
-                                          <h6 className="mb-1 fw-semibold fs-3">
-                                            Notes Application
-                                          </h6>
-                                          <span className="fs-2 d-block text-body-secondary">
-                                            To-do and Daily tasks
-                                          </span>
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div className="row align-items-center py-3">
-                                <div className="col-8">
-                                  <Link
-                                    className="fw-semibold d-flex align-items-center lh-1"
-                                    to="">
-                                    <i className="ti ti-help fs-6 me-2" />
-                                    Frequently Asked Questions
-                                  </Link>
-                                </div>
-                                <div className="col-4">
-                                  <div className="d-flex justify-content-end pe-4">
-                                    <button className="btn btn-primary">
-                                      Check
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="col-4 ms-n4">
-                            <div className="position-relative p-7 border-start h-100">
-                              <h5 className="fs-5 mb-9 fw-semibold">
-                                Quick Links
-                              </h5>
-                              <ul className="">
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/page-pricing.html">
-                                    Pricing Page
-                                  </Link>
-                                </li>
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/authentication-login.html">
-                                    Authentication Design
-                                  </Link>
-                                </li>
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/authentication-register.html">
-                                    Register Now
-                                  </Link>
-                                </li>
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/authentication-error.html">
-                                    404 Error Page
-                                  </Link>
-                                </li>
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/app-notes.html">
-                                    Notes App
-                                  </Link>
-                                </li>
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/page-user-profile.html">
-                                    User Application
-                                  </Link>
-                                </li>
-                                <li className="mb-3">
-                                  <Link
-                                    className="fw-semibold bg-hover-primary"
-                                    to="./main/page-account-settings.html">
-                                    Account Settings
-                                  </Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  {/* ------------------------------- */}
-                  {/* end apps Dropdown */}
-                  {/* ------------------------------- */}
                   <li className="nav-item dropdown-hover d-none d-lg-block">
                     <Link className="nav-link" to="./main/app-chat.html">
                       Chat
@@ -2281,98 +2002,6 @@ function Header() {
                       <i className="ti ti-align-justified fs-7" />
                     </Link>
                     <ul className="navbar-nav flex-row ms-auto align-items-center justify-content-center">
-                      {/* ------------------------------- */}
-                      {/* start language Dropdown */}
-                      {/* ------------------------------- */}
-                      <li className="nav-item nav-icon-hover-bg rounded-circle">
-                        <Link className="nav-link moon dark-layout" to="">
-                          <i className="ti ti-moon moon" />
-                        </Link>
-                        <Link className="nav-link sun light-layout" to="">
-                          <i className="ti ti-sun sun" />
-                        </Link>
-                      </li>
-                      <li className="nav-item nav-icon-hover-bg rounded-circle dropdown">
-                        <Link
-                          className="nav-link"
-                          to=""
-                          id="drop2"
-                          aria-expanded="false">
-                          <img
-                            src="./assets/images/svgs/icon-flag-en.svg"
-                            alt="modernize-img"
-                            width="20px"
-                            height="20px"
-                            className="rounded-circle object-fit-cover round-20"
-                          />
-                        </Link>
-                        <div
-                          className="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-                          aria-labelledby="drop2">
-                          <div className="message-body">
-                            <Link
-                              to=""
-                              className="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                              <div className="position-relative">
-                                <img
-                                  src="./assets/images/svgs/icon-flag-en.svg"
-                                  alt="modernize-img"
-                                  width="20px"
-                                  height="20px"
-                                  className="rounded-circle object-fit-cover round-20"
-                                />
-                              </div>
-                              <p className="mb-0 fs-3">English (UK)</p>
-                            </Link>
-                            <Link
-                              to=""
-                              className="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                              <div className="position-relative">
-                                <img
-                                  src="./assets/images/svgs/icon-flag-cn.svg"
-                                  alt="modernize-img"
-                                  width="20px"
-                                  height="20px"
-                                  className="rounded-circle object-fit-cover round-20"
-                                />
-                              </div>
-                              <p className="mb-0 fs-3">中国人 (Chinese)</p>
-                            </Link>
-                            <Link
-                              to=""
-                              className="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                              <div className="position-relative">
-                                <img
-                                  src="./assets/images/svgs/icon-flag-fr.svg"
-                                  alt="modernize-img"
-                                  width="20px"
-                                  height="20px"
-                                  className="rounded-circle object-fit-cover round-20"
-                                />
-                              </div>
-                              <p className="mb-0 fs-3">français (French)</p>
-                            </Link>
-                            <Link
-                              to=""
-                              className="d-flex align-items-center gap-2 py-3 px-4 dropdown-item">
-                              <div className="position-relative">
-                                <img
-                                  src="./assets/images/svgs/icon-flag-sa.svg"
-                                  alt="modernize-img"
-                                  width="20px"
-                                  height="20px"
-                                  className="rounded-circle object-fit-cover round-20"
-                                />
-                              </div>
-                              <p className="mb-0 fs-3">عربي (Arabic)</p>
-                            </Link>
-                          </div>
-                        </div>
-                      </li>
-                      {/* ------------------------------- */}
-                      {/* end language Dropdown */}
-                      {/* ------------------------------- */}
-                      {/* ------------------------------- */}
                       {/* start shopping cart Dropdown */}
                       {/* ------------------------------- */}
                       <li className="nav-item nav-icon-hover-bg rounded-circle">
@@ -5227,165 +4856,6 @@ function Header() {
           </div>
         </div>
         {/*  Shopping Cart */}
-        <div
-          className="offcanvas offcanvas-end shopping-cart"
-          tabIndex={-1}
-          id="offcanvasRight"
-          aria-labelledby="offcanvasRightLabel">
-          <div className="offcanvas-header justify-content-between py-4">
-            <h5
-              className="offcanvas-title fs-5 fw-semibold"
-              id="offcanvasRightLabel">
-              Shopping Cart
-            </h5>
-            <span className="badge bg-primary rounded-4 px-3 py-1 lh-sm">
-              5 new
-            </span>
-          </div>
-          <div className="offcanvas-body h-100 px-4 pt-0" data-simplebar="">
-            <ul className="mb-0">
-              <li className="pb-7">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="./assets/images/products/product-1.jpg"
-                    width={95}
-                    height={75}
-                    className="rounded-1 me-9 flex-shrink-0"
-                    alt="modernize-img"
-                  />
-                  <div>
-                    <h6 className="mb-1">Supreme toys cooker</h6>
-                    <p className="mb-0 text-muted fs-2">Kitchenware Item</p>
-                    <div className="d-flex align-items-center justify-content-between mt-2">
-                      <h6 className="fs-2 fw-semibold mb-0 text-muted">$250</h6>
-                      <div className="input-group input-group-sm w-50">
-                        <button
-                          className="btn border-0 round-20 minus p-0 bg-success-subtle text-success"
-                          type="button"
-                          id="add1">
-                          -
-                        </button>
-                        <input
-                          type="text"
-                          className="form-control round-20 bg-transparent text-muted fs-2 border-0 text-center qty"
-                          placeholder=""
-                          aria-label="Example text with button addon"
-                          aria-describedby="add1"
-                          defaultValue={1}
-                        />
-                        <button
-                          className="btn text-success bg-success-subtle p-0 round-20 border-0 add"
-                          type="button"
-                          id="addo2">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="pb-7">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="./assets/images/products/product-2.jpg"
-                    width={95}
-                    height={75}
-                    className="rounded-1 me-9 flex-shrink-0"
-                    alt="modernize-img"
-                  />
-                  <div>
-                    <h6 className="mb-1">Supreme toys cooker</h6>
-                    <p className="mb-0 text-muted fs-2">Kitchenware Item</p>
-                    <div className="d-flex align-items-center justify-content-between mt-2">
-                      <h6 className="fs-2 fw-semibold mb-0 text-muted">$250</h6>
-                      <div className="input-group input-group-sm w-50">
-                        <button
-                          className="btn border-0 round-20 minus p-0 bg-success-subtle text-success"
-                          type="button"
-                          id="add2">
-                          -
-                        </button>
-                        <input
-                          type="text"
-                          className="form-control round-20 bg-transparent text-muted fs-2 border-0 text-center qty"
-                          placeholder=""
-                          aria-label="Example text with button addon"
-                          aria-describedby="add2"
-                          defaultValue={1}
-                        />
-                        <button
-                          className="btn text-success bg-success-subtle p-0 round-20 border-0 add"
-                          type="button"
-                          id="addon34">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="pb-7">
-                <div className="d-flex align-items-center">
-                  <img
-                    src="./assets/images/products/product-3.jpg"
-                    width={95}
-                    height={75}
-                    className="rounded-1 me-9 flex-shrink-0"
-                    alt="modernize-img"
-                  />
-                  <div>
-                    <h6 className="mb-1">Supreme toys cooker</h6>
-                    <p className="mb-0 text-muted fs-2">Kitchenware Item</p>
-                    <div className="d-flex align-items-center justify-content-between mt-2">
-                      <h6 className="fs-2 fw-semibold mb-0 text-muted">$250</h6>
-                      <div className="input-group input-group-sm w-50">
-                        <button
-                          className="btn border-0 round-20 minus p-0 bg-success-subtle text-success"
-                          type="button"
-                          id="add3">
-                          -
-                        </button>
-                        <input
-                          type="text"
-                          className="form-control round-20 bg-transparent text-muted fs-2 border-0 text-center qty"
-                          placeholder=""
-                          aria-label="Example text with button addon"
-                          aria-describedby="add3"
-                          defaultValue={1}
-                        />
-                        <button
-                          className="btn text-success bg-success-subtle p-0 round-20 border-0 add"
-                          type="button"
-                          id="addon3">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <div className="align-bottom">
-              <div className="d-flex align-items-center pb-7">
-                <span className="text-dark fs-3">Sub Total</span>
-                <div className="ms-auto">
-                  <span className="text-dark fw-semibold fs-3">$2530</span>
-                </div>
-              </div>
-              <div className="d-flex align-items-center pb-7">
-                <span className="text-dark fs-3">Total</span>
-                <div className="ms-auto">
-                  <span className="text-dark fw-semibold fs-3">$6830</span>
-                </div>
-              </div>
-              <Link
-                to="./main/eco-checkout.html"
-                className="btn btn-outline-primary w-100">
-                Go to shopping cart
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
