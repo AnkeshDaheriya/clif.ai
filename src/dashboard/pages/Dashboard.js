@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
-// import ApexCharts from "apexcharts";
 
 function Dashboard() {
   document.addEventListener("DOMContentLoaded", () => {
@@ -32,6 +31,12 @@ function Dashboard() {
         circle.style.background = `conic-gradient(#0d6efd ${blueDegree}deg, #ddd ${blueDegree}deg)`;
       });
     });
+    document
+      .querySelector(".progress-container")
+      .addEventListener("wheel", (e) => {
+        e.preventDefault();
+        e.currentTarget.scrollLeft += e.deltaY;
+      });
   });
   return (
     <>
@@ -43,10 +48,7 @@ function Dashboard() {
               <div className="card-body">
                 <div className="d-sm-flex d-block align-items-end justify-content-between ">
                   <div className="mb-sm-0">
-                    <h4>
-                      Let's goals yor career Ankesh you will archive your career
-                      goals in [] Notes
-                    </h4>
+                    <h4>Let's elevate your career, Ankesh!</h4>
                   </div>
                 </div>
               </div>
@@ -58,7 +60,9 @@ function Dashboard() {
                 <div className="card-body">
                   <div className="d-block align-items-end mb-9">
                     <div className="mb-sm-0">
-                      <div className="progress-container justify-content-start row">
+                      <div
+                        className="progress-container  row"
+                        style={{ overflowX: "auto", whiteSpace: "nowrap" }}>
                         <div className="progress-bar d-flex justify-content-between align-items-center w-100">
                           <div className="title ">
                             <h4>Skill Goals Analysis</h4>
@@ -179,7 +183,7 @@ function Dashboard() {
 
               {/* Monthly Earnings */}
               <div className="card w-100 fill-height">
-                <div className="card-body ">
+                <div className="card-body m-2">
                   <div className="row align-items-center">
                     <div className=" col-8">
                       <h5 className="card-title mb-9 fw-semibold">
@@ -199,12 +203,12 @@ function Dashboard() {
                         <div id="breakup" />
                       </div>
                     </div>
-                    <div>
-                      <button className="btn btn-primary w-100">
-                        View Full Report
-                      </button>
-                    </div>
                   </div>
+                </div>
+                <div className="m-2">
+                  <button className="btn btn-primary w-100 align-items-center ">
+                    View Full Report
+                  </button>
                 </div>
               </div>
             </div>
@@ -260,6 +264,7 @@ function Dashboard() {
                         <p className="text-dark fs-3 mb-0">+9%</p>
                       </div>
                     </div>
+                    vie
                     <div id="customers" />
                   </div>
                 </div>

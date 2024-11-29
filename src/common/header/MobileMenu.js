@@ -15,11 +15,6 @@ const MobileMenu = ({ MobileHandler }) => {
                 src={process.env.PUBLIC_URL + "/images/logo.png"}
                 alt="Site Logo"
               />
-              <img
-                className="dark-mode"
-                src={process.env.PUBLIC_URL + "/images/logo.png"}
-                alt="Site Logo"
-              />
             </Link>
           </div>
           <button className="mobile-menu-close" onClick={MobileHandler}>
@@ -27,7 +22,17 @@ const MobileMenu = ({ MobileHandler }) => {
           </button>
         </div>
         <div className="mobilemenu-body">
-          <Nav />
+          <Nav></Nav>
+          <nav className="mainmenu-nav">
+            <ul className="mainmenu">
+              <li>
+                <Link to={process.env.PUBLIC_URL + "/login"}>Login</Link>
+              </li>
+              <li>
+                <Link to={process.env.PUBLIC_URL + "/signup"}>Sign Up</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

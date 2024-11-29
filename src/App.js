@@ -8,7 +8,7 @@ import DigitalAgency from "./pages/DigitalAgency";
 import CreativeAgency from "./pages/CreativeAgency";
 import PersonalPortfolio from "./pages/PersonalPortfolio";
 import HomeStartup from "./pages/HomeStartup";
-// import CorporateAgency from "./pages/CorporateAgency";
+import CorporateAgency from "./pages/CorporateAgency";
 
 // Blog Import
 import BlogGridView from "./pages/BlogGrid";
@@ -48,9 +48,13 @@ import ErrorPage from "./pages/404";
 import ComingSoon from "./pages/ComingSoon";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-import Dashboard from "./dashboard/pages/Dashboard";
+import Resource from "./pages/Resource";
+
 // Css Import
 import "./assets/scss/app.scss";
+
+//Dashboard pages
+import Dashboard from "./dashboard/pages/Dashboard";
 
 const App = () => {
   return (
@@ -58,8 +62,10 @@ const App = () => {
       <ScrollToTop>
         <Routes>
           {/* <Route path={process.env.PUBLIC_URL + "/"} element={<Splash />}/> */}
-          <Route path={process.env.PUBLIC_URL + "/"} element={<Dashboard />} />
-
+          <Route
+            path={process.env.PUBLIC_URL + "/"}
+            element={<CorporateAgency />}
+          />
           <Route
             path={process.env.PUBLIC_URL + "/digital-agency"}
             element={<DigitalAgency />}
@@ -76,7 +82,6 @@ const App = () => {
             path={process.env.PUBLIC_URL + "/home-startup"}
             element={<HomeStartup />}
           />
-
           {/* Blogs */}
           <Route
             path={process.env.PUBLIC_URL + "/blog-grid/"}
@@ -94,7 +99,6 @@ const App = () => {
             path={process.env.PUBLIC_URL + "/blog-details/:id"}
             element={<BlogDetails />}
           />
-
           {/* Service */}
           <Route
             path={process.env.PUBLIC_URL + "/service-one/"}
@@ -108,7 +112,6 @@ const App = () => {
             path={process.env.PUBLIC_URL + "/service-details/:slug"}
             element={<ServiceDetails />}
           />
-
           {/* Project  */}
           <Route
             path={process.env.PUBLIC_URL + "/project-grid-one"}
@@ -134,7 +137,6 @@ const App = () => {
             path={process.env.PUBLIC_URL + "/project-details/:slug"}
             element={<ProjectDetails />}
           />
-
           {/* Pages  */}
           <Route
             path={process.env.PUBLIC_URL + "/about-us"}
@@ -182,7 +184,6 @@ const App = () => {
             path={process.env.PUBLIC_URL + "/signup"}
             element={<SignUp />}
           />
-
           <Route
             path={process.env.PUBLIC_URL + "/404"}
             element={<ErrorPage />}
@@ -196,13 +197,17 @@ const App = () => {
             element={<PrivacyPolicy />}
           />
           <Route
-            path={process.env.PUBLIC_URL + "/dashboard"}
-            element={<Dashboard />}
-          />
-
-          <Route
             path={process.env.PUBLIC_URL + "/terms-use"}
             element={<TermsOfUse />}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/resource"}
+            element={<Resource />}
+          />
+          {/* //dashboard pages */}
+          <Route
+            path={process.env.PUBLIC_URL + "/dashboard"}
+            element={<Dashboard />}
           />
         </Routes>
       </ScrollToTop>

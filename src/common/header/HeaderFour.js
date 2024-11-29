@@ -68,9 +68,6 @@ const HeaderFour = () => {
                       <span></span>
                     </button>
                   </li>
-                  {/* <li className="my_switcher d-block d-lg-none">
-                                        <SwitcherHeader />
-                                    </li> */}
                 </ul>
               </div>
             </div>
