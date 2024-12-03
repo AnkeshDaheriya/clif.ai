@@ -13,25 +13,50 @@
     url(../fonts/tabler-icons/fonts/tabler-icons.ttf) format("truetype"),
     url(../fonts/tabler-icons/fonts/tabler-icons.svg#tabler-icons) format("svg");
 }
+
+.industry-item {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.industry-icon {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+    margin-left: auto;
+}
+
+.industry-item small {
+  color: #999;
+}
+
+.industry-item b {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
 .fill-height {
   height: -webkit-fill-available !important;
 }
 .search-box i {
-    position: absolute;
-    right: 10px; /* Adjust the position of the icon */
-    
-    color: #888;
-    pointer-events: none; /* Prevent icon from interfering with input */
+  position: absolute;
+  right: 10px; /* Adjust the position of the icon */
+
+  color: #888;
+  pointer-events: none; /* Prevent icon from interfering with input */
 }
 .search-box {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 .search-box input {
-   
-    border: 1px solid #ccc;
-   
+  border: 1px solid #ccc;
 }
 
 body .sidebar-item a {

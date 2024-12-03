@@ -36,7 +36,7 @@ function Header() {
             {/* ---------------------------------- */}
 
             <div className="brand-logo d-flex align-items-center justify-content-between">
-              <Link to="./main/index.html" className="text-nowrap logo-img">
+              <Link to="" className="text-nowrap logo-img">
                 <img
                   src="./assets/images/logos/dark-logo.svg"
                   className="dark-logo"
@@ -64,7 +64,7 @@ function Header() {
                 <li className="sidebar-item">
                   <Link
                     className="sidebar-link"
-                    to=""
+                    to="#"
                     id="get-url"
                     aria-expanded="false">
                     <span>
@@ -74,12 +74,20 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/index2.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-shopping-cart" />
+                    </span>
+                    <span className="hide-menu">Skill Assessment</span>
+                  </Link>
+                </li>
+                <li className="sidebar-item">
+                  <Link
+                    className="sidebar-link"
+                    to={process.env.PUBLIC_URL + "/dashboard"}
+                    aria-expanded="false">
+                    <span>
+                      <i className="ti ti-currency-dollar" />
                     </span>
                     <span className="hide-menu">Dashboard</span>
                   </Link>
@@ -87,125 +95,53 @@ function Header() {
                 <li className="sidebar-item">
                   <Link
                     className="sidebar-link"
-                    to="./main/index3.html"
-                    aria-expanded="false">
-                    <span>
-                      <i className="ti ti-currency-dollar" />
-                    </span>
-                    <span className="hide-menu">Portfolio</span>
-                  </Link>
-                </li>
-                <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/index4.html"
+                    to={process.env.PUBLIC_URL + "/careerpath"}
                     aria-expanded="false">
                     <span>
                       <i className="ti ti-cpu" />
                     </span>
-                    <span className="hide-menu">Groups</span>
+                    <span className="hide-menu">Career Path</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/index5.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-activity-heartbeat" />
                     </span>
-                    <span className="hide-menu">Companies</span>
+                    <span className="hide-menu">Mentor</span>
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/index6.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-playlist" />
                     </span>
-                    <span className="hide-menu">Modules</span>
+                    <span className="hide-menu">Jobs</span>
                   </Link>
                 </li>
-                {/* ---------------------------------- */}
-                {/* Frontend page */}
-                {/* ---------------------------------- */}
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link has-arrow"
-                    to=""
-                    aria-expanded="false">
-                    <span className="d-flex">
-                      <i className="ti ti-layout-grid" />
+                  <Link className="sidebar-link" to="" aria-expanded="false">
+                    <span>
+                      <i className="ti ti-playlist" />
                     </span>
-                    <span className="hide-menu">Topics</span>
+                    <span className="hide-menu">Auto Resume</span>
                   </Link>
-                  <ul aria-expanded="false" className="collapse first-level">
-                    <li className="sidebar-item">
-                      <Link
-                        to="./main/frontend-landingpage.html"
-                        className="sidebar-link">
-                        <div className="round-16 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-circle" />
-                        </div>
-                        <span className="hide-menu">Homepage</span>
-                      </Link>
-                    </li>
-                    <li className="sidebar-item">
-                      <Link
-                        to="./main/frontend-aboutpage.html"
-                        className="sidebar-link">
-                        <div className="round-16 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-circle" />
-                        </div>
-                        <span className="hide-menu">About Us</span>
-                      </Link>
-                    </li>
-                    <li className="sidebar-item">
-                      <Link
-                        to="./main/frontend-contactpage.html"
-                        className="sidebar-link">
-                        <div className="round-16 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-circle" />
-                        </div>
-                        <span className="hide-menu">Contact Us</span>
-                      </Link>
-                    </li>
-                    <li className="sidebar-item">
-                      <Link
-                        to="./main/frontend-blogpage.html"
-                        className="sidebar-link">
-                        <div className="round-16 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-circle" />
-                        </div>
-                        <span className="hide-menu">Blog</span>
-                      </Link>
-                    </li>
-                    <li className="sidebar-item">
-                      <Link
-                        to="./main/frontend-blogdetailpage.html"
-                        className="sidebar-link">
-                        <div className="round-16 d-flex align-items-center justify-content-center">
-                          <i className="ti ti-circle" />
-                        </div>
-                        <span className="hide-menu">Blog Details</span>
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
-                {/* ---------------------------------- */}
-                {/* Apps */}
-                {/* ---------------------------------- */}
+                <li className="sidebar-item">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
+                    <span>
+                      <i className="ti ti-playlist" />
+                    </span>
+                    <span className="hide-menu">Groups</span>
+                  </Link>
+                </li>
+
                 <li className="nav-small-cap">
                   <i className="ti ti-dots nav-small-cap-icon fs-4" />
                   <span className="hide-menu">Apps</span>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-calendar.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-calendar" />
                     </span>
@@ -213,10 +149,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-kanban.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-layout-kanban" />
                     </span>
@@ -224,10 +157,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-chat.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-message-dots" />
                     </span>
@@ -235,10 +165,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-email.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-mail" />
                     </span>
@@ -246,10 +173,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-notes.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-notes" />
                     </span>
@@ -257,10 +181,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-contact.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-phone" />
                     </span>
@@ -268,10 +189,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-contact2.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-list-details" />
                     </span>
@@ -279,10 +197,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/app-invoice.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-file-text" />
                     </span>
@@ -290,10 +205,7 @@ function Header() {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
-                    className="sidebar-link"
-                    to="./main/page-user-profile.html"
-                    aria-expanded="false">
+                  <Link className="sidebar-link" to="" aria-expanded="false">
                     <span>
                       <i className="ti ti-user-circle" />
                     </span>
@@ -312,9 +224,7 @@ function Header() {
                   </Link>
                   <ul aria-expanded="false" className="collapse first-level">
                     <li className="sidebar-item">
-                      <Link
-                        to="./main/blog-posts.html"
-                        className="sidebar-link">
+                      <Link to="" className="sidebar-link">
                         <div className="round-16 d-flex align-items-center justify-content-center">
                           <i className="ti ti-circle" />
                         </div>
@@ -322,9 +232,7 @@ function Header() {
                       </Link>
                     </li>
                     <li className="sidebar-item">
-                      <Link
-                        to="./main/blog-detail.html"
-                        className="sidebar-link">
+                      <Link to="" className="sidebar-link">
                         <div className="round-16 d-flex align-items-center justify-content-center">
                           <i className="ti ti-circle" />
                         </div>
@@ -345,7 +253,7 @@ function Header() {
                   </Link>
                   <ul aria-expanded="false" className="collapse first-level">
                     <li className="sidebar-item">
-                      <Link to="./main/eco-shop.html" className="sidebar-link">
+                      <Link to="" className="sidebar-link">
                         <div className="round-16 d-flex align-items-center justify-content-center">
                           <i className="ti ti-circle" />
                         </div>
@@ -353,9 +261,7 @@ function Header() {
                       </Link>
                     </li>
                     <li className="sidebar-item">
-                      <Link
-                        to="./main/eco-shop-detail.html"
-                        className="sidebar-link">
+                      <Link to="" className="sidebar-link">
                         <div className="round-16 d-flex align-items-center justify-content-center">
                           <i className="ti ti-circle" />
                         </div>
@@ -1548,7 +1454,7 @@ function Header() {
                 <li className="sidebar-item">
                   <Link
                     className="sidebar-link sidebar-link"
-                    to="./main/icon-solar.html"
+                    to=""
                     aria-expanded="false">
                     <span className="rounded-3">
                       <i className="ti ti-mood-smile" />
@@ -1727,7 +1633,7 @@ function Header() {
                 <li className="sidebar-item">
                   <Link
                     className="sidebar-link sidebar-link"
-                    to="./docs/index.html"
+                    to=""
                     aria-expanded="false">
                     <span className="rounded-3">
                       <i className="ti ti-file-text" />
@@ -1949,23 +1855,23 @@ function Header() {
                 </ul>
                 <ul className="navbar-nav quick-links d-none d-lg-flex align-items-center">
                   <li className="nav-item dropdown-hover d-none d-lg-block">
-                    <Link className="nav-link" to="./main/app-chat.html">
+                    <Link className="nav-link" to="">
                       Chat
                     </Link>
                   </li>
                   <li className="nav-item dropdown-hover d-none d-lg-block">
-                    <Link className="nav-link" to="./main/app-calendar.html">
+                    <Link className="nav-link" to="">
                       Calendar
                     </Link>
                   </li>
                   <li className="nav-item dropdown-hover d-none d-lg-block">
-                    <Link className="nav-link" to="./main/app-email.html">
+                    <Link className="nav-link" to="">
                       Email
                     </Link>
                   </li>
                 </ul>
                 <div className="d-block d-lg-none py-4">
-                  <Link to="./main/index.html" className="text-nowrap logo-img">
+                  <Link to="" className="text-nowrap logo-img">
                     <img
                       src="./assets/images/logos/dark-logo.svg"
                       className="dark-logo"
@@ -2210,7 +2116,7 @@ function Header() {
                             </div>
                             <div className="message-body">
                               <Link
-                                to="./main/page-user-profile.html"
+                                to=""
                                 className="py-8 px-7 mt-8 d-flex align-items-center">
                                 <span className="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                                   <img
@@ -2230,7 +2136,7 @@ function Header() {
                                 </div>
                               </Link>
                               <Link
-                                to="./main/app-email.html"
+                                to=""
                                 className="py-8 px-7 d-flex align-items-center">
                                 <span className="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                                   <img
@@ -2250,7 +2156,7 @@ function Header() {
                                 </div>
                               </Link>
                               <Link
-                                to="./main/app-notes.html"
+                                to=""
                                 className="py-8 px-7 d-flex align-items-center">
                                 <span className="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                                   <img
@@ -2351,9 +2257,7 @@ function Header() {
                           aria-expanded="false"
                           className="collapse first-level my-3">
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/app-chat.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-chat.svg"
@@ -2374,9 +2278,7 @@ function Header() {
                             </Link>
                           </li>
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/app-invoice.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-invoice.svg"
@@ -2420,9 +2322,7 @@ function Header() {
                             </Link>
                           </li>
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/app-email.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-message-box.svg"
@@ -2443,9 +2343,7 @@ function Header() {
                             </Link>
                           </li>
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/page-user-profile.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-cart.svg"
@@ -2466,9 +2364,7 @@ function Header() {
                             </Link>
                           </li>
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/app-calendar.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-date.svg"
@@ -2489,9 +2385,7 @@ function Header() {
                             </Link>
                           </li>
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/app-contact2.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-lifebuoy.svg"
@@ -2512,9 +2406,7 @@ function Header() {
                             </Link>
                           </li>
                           <li className="sidebar-item py-2">
-                            <Link
-                              to="./main/app-notes.html"
-                              className="d-flex align-items-center">
+                            <Link to="" className="d-flex align-items-center">
                               <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                 <img
                                   src="./assets/images/svgs/icon-dd-application.svg"
@@ -2567,16 +2459,12 @@ function Header() {
                               </Link>
                             </li>
                             <li className="sidebar-item py-2">
-                              <Link
-                                className="fw-semibold text-dark"
-                                to="./main/app-notes.html">
+                              <Link className="fw-semibold text-dark" to="">
                                 Notes App
                               </Link>
                             </li>
                             <li className="sidebar-item py-2">
-                              <Link
-                                className="fw-semibold text-dark"
-                                to="./main/page-user-profile.html">
+                              <Link className="fw-semibold text-dark" to="">
                                 User Application
                               </Link>
                             </li>
@@ -2593,7 +2481,7 @@ function Header() {
                       <li className="sidebar-item">
                         <Link
                           className="sidebar-link"
-                          to="./main/app-chat.html"
+                          to=""
                           aria-expanded="false">
                           <span>
                             <i className="ti ti-message-dots" />
@@ -2604,7 +2492,7 @@ function Header() {
                       <li className="sidebar-item">
                         <Link
                           className="sidebar-link"
-                          to="./main/app-calendar.html"
+                          to=""
                           aria-expanded="false">
                           <span>
                             <i className="ti ti-calendar" />
@@ -2615,7 +2503,7 @@ function Header() {
                       <li className="sidebar-item">
                         <Link
                           className="sidebar-link"
-                          to="./main/app-email.html"
+                          to=""
                           aria-expanded="false">
                           <span>
                             <i className="ti ti-mail" />
@@ -2640,9 +2528,7 @@ function Header() {
                     </Link>
                   </li>
                   <li className="nav-item d-none d-xl-block">
-                    <Link
-                      to="./main/index.html"
-                      className="text-nowrap nav-link">
+                    <Link to="" className="text-nowrap nav-link">
                       <img
                         src="./assets/images/logos/dark-logo.svg"
                         className="dark-logo"
@@ -2688,7 +2574,7 @@ function Header() {
                                   <div className="col-6">
                                     <div className="position-relative">
                                       <Link
-                                        to="./main/app-chat.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2709,7 +2595,7 @@ function Header() {
                                         </div>
                                       </Link>
                                       <Link
-                                        to="./main/app-invoice.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2730,7 +2616,7 @@ function Header() {
                                         </div>
                                       </Link>
                                       <Link
-                                        to="./main/app-contact2.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2751,7 +2637,7 @@ function Header() {
                                         </div>
                                       </Link>
                                       <Link
-                                        to="./main/app-email.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2776,7 +2662,7 @@ function Header() {
                                   <div className="col-6">
                                     <div className="position-relative">
                                       <Link
-                                        to="./main/page-user-profile.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2797,7 +2683,7 @@ function Header() {
                                         </div>
                                       </Link>
                                       <Link
-                                        to="./main/app-calendar.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2818,7 +2704,7 @@ function Header() {
                                         </div>
                                       </Link>
                                       <Link
-                                        to="./main/app-contact.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2839,7 +2725,7 @@ function Header() {
                                         </div>
                                       </Link>
                                       <Link
-                                        to="./main/app-notes.html"
+                                        to=""
                                         className="d-flex align-items-center pb-9 position-relative">
                                         <div className="text-bg-light rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
                                           <img
@@ -2919,14 +2805,14 @@ function Header() {
                                 <li className="mb-3">
                                   <Link
                                     className="fw-semibold bg-hover-primary"
-                                    to="./main/app-notes.html">
+                                    to="">
                                     Notes App
                                   </Link>
                                 </li>
                                 <li className="mb-3">
                                   <Link
                                     className="fw-semibold bg-hover-primary"
-                                    to="./main/page-user-profile.html">
+                                    to="">
                                     User Application
                                   </Link>
                                 </li>
@@ -2948,23 +2834,23 @@ function Header() {
                   {/* end apps Dropdown */}
                   {/* ------------------------------- */}
                   <li className="nav-item dropdown-hover d-none d-lg-block">
-                    <Link className="nav-link" to="./main/app-chat.html">
+                    <Link className="nav-link" to="">
                       Chat
                     </Link>
                   </li>
                   <li className="nav-item dropdown-hover d-none d-lg-block">
-                    <Link className="nav-link" to="./main/app-calendar.html">
+                    <Link className="nav-link" to="">
                       Calendar
                     </Link>
                   </li>
                   <li className="nav-item dropdown-hover d-none d-lg-block">
-                    <Link className="nav-link" to="./main/app-email.html">
+                    <Link className="nav-link" to="">
                       Email
                     </Link>
                   </li>
                 </ul>
                 <div className="d-block d-xl-none">
-                  <Link to="./main/index.html" className="text-nowrap nav-link">
+                  <Link to="" className="text-nowrap nav-link">
                     <img
                       src="./assets/images/logos/dark-logo.svg"
                       width={180}
@@ -3320,7 +3206,7 @@ function Header() {
                             </div>
                             <div className="message-body">
                               <Link
-                                to="./main/page-user-profile.html"
+                                to=""
                                 className="py-8 px-7 mt-8 d-flex align-items-center">
                                 <span className="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                                   <img
@@ -3340,7 +3226,7 @@ function Header() {
                                 </div>
                               </Link>
                               <Link
-                                to="./main/app-email.html"
+                                to=""
                                 className="py-8 px-7 d-flex align-items-center">
                                 <span className="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                                   <img
@@ -3360,7 +3246,7 @@ function Header() {
                                 </div>
                               </Link>
                               <Link
-                                to="./main/app-notes.html"
+                                to=""
                                 className="py-8 px-7 d-flex align-items-center">
                                 <span className="d-flex align-items-center justify-content-center text-bg-light rounded-1 p-6">
                                   <img
@@ -3451,37 +3337,37 @@ function Header() {
                     </Link>
                     <ul aria-expanded="false" className="collapse first-level">
                       <li className="sidebar-item">
-                        <Link to="./main/index.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-aperture" />
                           <span className="hide-menu">Modern</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link to="./main/index2.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-shopping-cart" />
                           <span className="hide-menu">eCommerce</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link to="./main/index3.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-currency-dollar" />
                           <span className="hide-menu">NFT</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link to="./main/index4.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-cpu" />
                           <span className="hide-menu">Crypto</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link to="./main/index5.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-activity-heartbeat" />
                           <span className="hide-menu">General</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link to="./main/index6.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-playlist" />
                           <span className="hide-menu">Music</span>
                         </Link>
@@ -3507,25 +3393,19 @@ function Header() {
                     </Link>
                     <ul aria-expanded="false" className="collapse first-level">
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-calendar.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-calendar" />
                           <span className="hide-menu">Calendar</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-kanban.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-layout-kanban" />
                           <span className="hide-menu">Kanban</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-chat.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-message-dots" />
                           <span className="hide-menu">Chat</span>
                         </Link>
@@ -3533,7 +3413,7 @@ function Header() {
                       <li className="sidebar-item">
                         <Link
                           className="sidebar-link"
-                          to="./main/app-email.html"
+                          to=""
                           aria-expanded="false">
                           <span>
                             <i className="ti ti-mail" />
@@ -3542,73 +3422,55 @@ function Header() {
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-contact.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-phone" />
                           <span className="hide-menu">Contact Table</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-contact2.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-list-details" />
                           <span className="hide-menu">Contact List</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-notes.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-notes" />
                           <span className="hide-menu">Notes</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/app-invoice.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-file-text" />
                           <span className="hide-menu">Invoice</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/page-user-profile.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-user-circle" />
                           <span className="hide-menu">User Profile</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/blog-posts.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-article" />
                           <span className="hide-menu">Posts</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/blog-detail.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-details" />
                           <span className="hide-menu">Detail</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/eco-shop.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-shopping-cart" />
                           <span className="hide-menu">Shop</span>
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/eco-shop-detail.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-basket" />
                           <span className="hide-menu">Shop Detail</span>
                         </Link>
@@ -4298,9 +4160,7 @@ function Header() {
                         </Link>
                       </li>
                       <li className="sidebar-item">
-                        <Link
-                          to="./main/icon-solar.html"
-                          className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-circle" />
                           <span className="hide-menu">Solar Icon</span>
                         </Link>
@@ -4323,7 +4183,7 @@ function Header() {
                     </Link>
                     <ul aria-expanded="false" className="collapse first-level">
                       <li className="sidebar-item">
-                        <Link to="./docs/index.html" className="sidebar-link">
+                        <Link to="" className="sidebar-link">
                           <i className="ti ti-circle" />
                           <span className="hide-menu">Documentation</span>
                         </Link>

@@ -1,186 +1,76 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../common/Header";
 import Footer from "../common/Footer";
+import Charts from "../componant/Charts";
+import Circle from "../componant/Circle";
+import OneCircle from "../componant/OneCircle";
 
 function Dashboard() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const circles = document.querySelectorAll(".circle");
-
-    circles.forEach((circle, index) => {
-      // Get progress percentage from data attribute
-      const progress = parseInt(circle.getAttribute("data-progress"), 10);
-
-      // Calculate the rotation for the progress ring
-      const rotation = (progress / 100) * 360;
-
-      // Set the rotation of the progress ring
-      const progressRing = circle.querySelector("::after");
-      circle.style.setProperty("--rotation", `${rotation}deg`);
-
-      // Dynamically apply active class (simulate level progression)
-      setTimeout(() => {
-        circle.classList.add("active");
-        circle.style.setProperty("--rotation", `${rotation}deg`);
-      }, index * 1000); // Delay for animation
-
-      document.querySelectorAll(".circle").forEach((circle) => {
-        const progress = circle.getAttribute("data-progress"); // Fetch progress value
-        const blueDegree = (progress / 100) * 360; // Calculate degree for progress
-
-        // Set dynamic background using conic-gradient
-        circle.style.background = `conic-gradient(#0d6efd ${blueDegree}deg, #ddd ${blueDegree}deg)`;
-      });
-    });
-    document
-      .querySelector(".progress-container")
-      .addEventListener("wheel", (e) => {
-        e.preventDefault();
-        e.currentTarget.scrollLeft += e.deltaY;
-      });
-  });
   return (
     <>
       <Header />
       <div className="body-wrapper">
         <div className="container-fluid">
+          <div className="col-lg-4 d-flex align-items-stretch">
+            <div className="m-2 w-100">
+              <div className="card-body">
+                <div className="d-sm-flex d-block align-items-center justify-content-between "></div>
+                <div className="row d-flex align-items-center">
+                  <div className="industry-container">
+                    <div className="industry-item">
+                      <img
+                        src="https://img.icons8.com/ios/50/000000/technology.png"
+                        alt="primary industry"
+                        className="industry-icon"
+                      />
+                      <div>
+                        <small>Primary Industry</small>
+                        <br />
+                        <b>Technology</b>
+                      </div>
+
+                      <img
+                        src="https://img.icons8.com/ios/50/000000/none.png"
+                        alt="secondary industry"
+                        className="industry-icon"
+                      />
+                      <div>
+                        <small>Secondary Industry</small>
+                        <br />
+                        <b>None</b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="row">
             <div className="d-flex align-items-end">
               <div className="card-body">
                 <div className="d-sm-flex d-block align-items-end justify-content-between ">
                   <div className="mb-sm-0">
-                    <h4>Let's elevate your career, Ankesh!</h4>
+                    <h4>
+                      <b>Dashboard</b>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="d-flex align-items-end">
-              <div className="card w-100">
-                <div className="card-body">
-                  <div className="d-block align-items-end mb-9">
-                    <div className="mb-sm-0">
-                      <div
-                        className="progress-container  row"
-                        style={{ overflowX: "auto", whiteSpace: "nowrap" }}>
-                        <div className="progress-bar d-flex justify-content-between align-items-center w-100">
-                          <div className="title ">
-                            <h4>Skill Goals Analysis</h4>
-                            {/* <p>
-                              You Will Archive Your Career Goals in [] Notes
-                            </p> */}
-                          </div>
-                          {[
-                            {
-                              level: "LEVEL 1",
-                              progress: 14,
-                              avg: "14%",
-                              color: "red",
-                            },
-                            {
-                              level: "LEVEL 2",
-                              progress: 28,
-                              avg: "28%",
-                              color: "orange",
-                            },
-                            {
-                              level: "LEVEL 3",
-                              progress: 42,
-                              avg: "42%",
-                              color: "yellow",
-                            },
-                            {
-                              level: "LEVEL 4",
-                              progress: 56,
-                              avg: "56%",
-                              color: "lightgreen",
-                            },
-                            {
-                              level: "LEVEL 5",
-                              progress: 70,
-                              avg: "70%",
-                              color: "green",
-                            },
-                            {
-                              level: "LEVEL 6",
-                              progress: 84,
-                              avg: "84%",
-                              color: "blue",
-                            },
-                            {
-                              level: "LEVEL 7",
-                              progress: 100,
-                              avg: "100%",
-                              color: "purple",
-                            },
-                          ].map((item, index) => (
-                            <div className="col-auto text-center" key={index}>
-                              {/* Progress Circle */}
-                              <div
-                                className="circle mx-auto"
-                                data-progress={item.progress}>
-                                <div className="progress-ring"></div>
-                                <div className="inner-circle"></div>
-                              </div>
-                              <small className={`text-${item.color} d-block`}>
-                                {item.level}
-                              </small>
-                              {/* Arrow Section */}
-                              {index < 7 && (
-                                <div
-                                  className={`arrow text-center text-${item.color}`}>
-                                  {item.avg}
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="progress-container justify-content-start row">
-                        <div className="progress-bar d-flex justify-content-between align-items-center w-100">
-                          <div className="row">
-                            <div className="d-flex align-items-baseline col ">
-                              <span className="round-8 text-bg-primary rounded-circle me-6" />
-                              <div>
-                                <h6 className=" fw-semibold mb-0">
-                                  <small>Desired Salary</small> $48,820
-                                </h6>
-                              </div>
-                            </div>
-                            <div className="d-flex align-items-baseline col ">
-                              <span className="round-8 text-bg-secondary rounded-circle me-6" />
-                              <h6 className=" fw-semibold mb-0">
-                                <small>Current Salary</small> : $26,498
-                              </h6>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-          </div>
-
           <div className="row">
             <div className="col-lg-8 d-flex align-items-stretch">
               <div className="card w-100">
                 <div className="card-body">
-                  <div className="d-sm-flex d-block align-items-center justify-content-between mb-9"></div>
+                  <div className="d-sm-flex d-block align-items-center justify-content-between "></div>
                   <div className="row align-items-center">
-                    <div className="">
-                      <div id="chart" className="mx-n6" />
-                      <div id="chart"></div>
-                    </div>
+                    <Charts />
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-lg-4 d-flex align-items-stretch flex-column">
-              {/* Yearly Breakup */}
-
               {/* Monthly Earnings */}
               <div className="card w-100 fill-height">
                 <div className="card-body m-2">
@@ -189,7 +79,7 @@ function Dashboard() {
                       <h5 className="card-title mb-9 fw-semibold">
                         Progress to Goal
                       </h5>
-                      <h4 className="fw-semibold mb-3">0%</h4>
+                      <h4 className="fw-semibold mb-3"></h4>
                       <div className="d-flex align-items-center mb-3">
                         <span className="me-1 rounded-circle bg-success-subtle round-20 d-flex align-items-center justify-content-center">
                           <i className="ti ti-arrow-up-left text-success" />
@@ -200,15 +90,30 @@ function Dashboard() {
                     </div>
                     <div className="col-4">
                       <div className="d-flex justify-content-center">
-                        <div id="breakup" />
+                        <OneCircle />
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="m-2">
-                  <button className="btn btn-primary w-100 align-items-center ">
-                    View Full Report
-                  </button>
+              </div>
+            </div>
+            <div className="row">
+              <div className="d-flex align-items-stretc ">
+                <div className="card w-100">
+                  <div className="card-body m-2">
+                    <div className="row align-items-center ">
+                      <div className="mb-sm-0">
+                        <Circle />
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <b>
+                        <Link to={process.env.PUBLIC_URL + "/careerpath"}>
+                          <u>View More</u>
+                        </Link>
+                      </b>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

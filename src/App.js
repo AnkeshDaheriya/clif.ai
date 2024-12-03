@@ -55,6 +55,7 @@ import "./assets/scss/app.scss";
 
 //Dashboard pages
 import Dashboard from "./dashboard/pages/Dashboard";
+import CareerPath from "./dashboard/pages/CareerPath";
 
 const App = () => {
   return (
@@ -208,6 +209,10 @@ const App = () => {
           <Route
             path={process.env.PUBLIC_URL + "/dashboard"}
             element={<Dashboard />}
+          />
+          <Route
+            path={process.env.PUBLIC_URL + "/careerpath"}
+            element={<CareerPath />}
           />
         </Routes>
       </ScrollToTop>
